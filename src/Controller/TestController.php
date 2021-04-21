@@ -22,7 +22,7 @@ class TestController extends AbstractController
     }
 
     /**
-     * @Route("/dataNbmax/{id}", name="existPlace")
+     * @Route("/dataNbmax/{id}", name=nbPlace")
      */
     public function getData(DataParking $dataParking = null, DataParkingRepository $repo)
     {
@@ -30,7 +30,7 @@ class TestController extends AbstractController
     }
 
     /**
-     * @Route("/entrer/{id}", name="existPlace")
+     * @Route("/entrer/{id}", name="entrerPArking")
      */
     public function entrer(DataParking $dataParking = null, DataParkingRepository $repo)
     {
@@ -41,7 +41,7 @@ class TestController extends AbstractController
     }
 
     /**
-     * @Route("/sortir/{id}", name="existPlace")
+     * @Route("/sortir/{id}", name="sortieParking")
      */
     public function sortir(DataParking $dataParking = null, DataParkingRepository $repo)
     {
@@ -52,7 +52,7 @@ class TestController extends AbstractController
     }
 
     /**
-     * @Route("/reset/{id}", name="existPlace")
+     * @Route("/reset/{id}", name="resetParking")
      */
     public function reset(DataParking $dataParking = null, DataParkingRepository $repo)
     {
