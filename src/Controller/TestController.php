@@ -13,10 +13,11 @@ class TestController extends AbstractController
     /**
      * @Route("/", name="test")
      */
-    public function index(): Response
+    public function index(DataParkingRepository $repo): Response
     {
         return $this->render('Data/index.html.twig', [
             'controller_name' => 'TestController',
+            'data' => $repo->find(1) 
         ]);
     }
 
@@ -34,6 +35,8 @@ class TestController extends AbstractController
     public function entrer(DataParking $dataParking = null, DataParkingRepository $repo)
     {
         $dataParking->setNbVoiture($dataParking->getNbVoiture()+1);
+        $this->getDoctrine()->getManager()->persist($dataParking);
+        $this->getDoctrine()->getManager()->flush();
         return $this->json(["done" => True ], 201, []); 
     }
 
@@ -43,6 +46,19 @@ class TestController extends AbstractController
     public function sortir(DataParking $dataParking = null, DataParkingRepository $repo)
     {
         $dataParking->setNbVoiture($dataParking->getNbVoiture()+1);
+        $this->getDoctrine()->getManager()->persist($dataParking);
+        $this->getDoctrine()->getManager()->flush();
+        return $this->json(["done" => True ], 201, []); 
+    }
+
+    /**
+     * @Route("/reset/{id}", name="existPlace")
+     */
+    public function reset(DataParking $dataParking = null, DataParkingRepository $repo)
+    {
+        $dataParking->setNbVoiture(0);
+        $this->getDoctrine()->getManager()->persist($dataParking);
+        $this->getDoctrine()->getManager()->flush();
         return $this->json(["done" => True ], 201, []); 
     }
 

@@ -3,28 +3,32 @@
 {% block title %}Hello TestController!{% endblock %}
 
 {% block body %}
-<!DOCTYPE html>
-<html>
-<head>
-	<style type="text/css">
-		body{
-			background-color: #d8d7d6;
-		}
-	</style>
-	<title></title>
-</head>
-<body>
-	<div id="container" style="height: 1300px;border: solid 3px #000000;width: 77%;padding: 0.5%;">
-		<div id="first">
-			<img src="{{asset('images/image_1.jpg')}}" style="width: 100%; height: 400px">
-		</div>
-		<div id="second" style="border: solid 2px #797979;background-color: #e0e0e0;margin-top: 30%">
-			<img src="{{asset('images/image_2.png')}}" style="width: 12%;margin-left: 34%;margin-top: 1%;">
-			<strong><label style="font-size: 65px;position: relative;top: -25px;margin-left: 8%;color :#0B5345 ">  2/5</label></strong>
-		</div>
-		<div id="third" style="border: solid 2px #797979;margin-top: 50%;background-color: #154360;">
-			<h2><label style="font-size: 60px;margin-left : 27%; color:white">Smart Parking</label></h2>
-		</div>
-</body>
-</html>
+    
+	<section class="u-align-center u-clearfix u-grey-5 u-section-1" id="carousel_c438" style="margin-top : -10%;">
+        <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width-xs u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+            <div class="u-layout-col">
+                <div class="u-size-30">
+                <div class="u-layout-row">
+                    <div class="u-container-style u-image u-layout-cell u-left-cell u-right-cell u-size-60 u-image-1" style="background-image: url(images/image_1.jpg);" data-image-width="750" data-image-height="375">
+                    <div class="u-container-layout u-container-layout-1"></div>
+                    </div>
+                </div>
+                </div>
+                <div class="u-size-30">
+                <div class="u-layout-row">
+                    <div class="u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-2">
+                    <div class="u-container-layout u-container-layout-2"> <img src="{{asset('images/voiture.png')}}" alt="" class="u-image u-image-default u-preserve-proportions u-image-2" data-image-width="400" data-image-height="400">
+                        <h2 class="u-align-center u-custom-font u-font-playfair-display u-text u-text-palette-4-dark-2 u-text-1">{{data.nbVoiture}}/6</h2>
+                        <p class="u-align-center u-text u-text-palette-4-dark-3 u-text-2">Smart Parking</p> <img src="{{asset('images/logo.png')}}" alt="" class="u-image u-image-default u-preserve-proportions u-image-3" data-image-width="1000" data-image-height="1000"> </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+  </section>
+  <h1>Hello</h1>
 {% endblock %}

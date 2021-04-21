@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
         <meta http-equiv="refresh" content="5">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="{{asset('css/nicepage.css')}}" media="screen">
+        <link rel="stylesheet" href="{{asset('css/Home.css')}}" media="screen">
+        <meta name="generator" content="Nicepage 3.12.1, nicepage.com">
+        <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+        <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
@@ -14,7 +21,9 @@
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body data-home-page="Home.html" data-home-page-title="Home" class="u-body">
+        {% block body %}
+            
+        {% endblock %}
     </body>
 </html>
