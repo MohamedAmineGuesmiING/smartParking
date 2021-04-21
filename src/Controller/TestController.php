@@ -22,9 +22,9 @@ class TestController extends AbstractController
     }
 
     /**
-     * @Route("/dataNbmax/{id}", name=nbPlace")
+     * @Route("/data/{id}", name="data")
      */
-    public function getData(DataParking $dataParking = null, DataParkingRepository $repo)
+    public function getNbMAx(DataParking $dataParking = null, DataParkingRepository $repo)
     {
         return $this->json(["nbMax" => $dataParking->getMaxVoiture() ], 201, []); 
     }
