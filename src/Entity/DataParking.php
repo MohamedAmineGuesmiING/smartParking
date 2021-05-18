@@ -32,6 +32,11 @@ class DataParking
      */
     private $codeAdmin;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $enter;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class DataParking
     public function setCodeAdmin(string $codeAdmin): self
     {
         $this->codeAdmin = $codeAdmin;
+
+        return $this;
+    }
+
+    public function getEnter(): ?int
+    {
+        return $this->enter;
+    }
+
+    public function setEnter(int $enter): self
+    {
+        $this->enter = $enter;
 
         return $this;
     }

@@ -62,4 +62,12 @@ class TestController extends AbstractController
         return $this->json(["done" => True ], 201, []); 
     }
 
+    /**
+     * @Route("/getEnter/{id}", name="getEnter")
+     */
+     public function enter(DataParking $dataParking = null)
+     {
+         return $this->json(["nb" => $dataParking->getEnter()  ], 201, []); 
+     }
+
 }
