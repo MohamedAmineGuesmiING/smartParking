@@ -45,7 +45,7 @@ class TestController extends AbstractController
      */
     public function sortir(DataParking $dataParking = null, DataParkingRepository $repo)
     {
-        $dataParking->setNbVoiture($dataParking->getNbVoiture()+1);
+        $dataParking->setNbVoiture($dataParking->getNbVoiture()-1);
         $this->getDoctrine()->getManager()->persist($dataParking);
         $this->getDoctrine()->getManager()->flush();
         return $this->json(["done" => True ], 201, []); 
